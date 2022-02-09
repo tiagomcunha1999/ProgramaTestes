@@ -1,2 +1,3 @@
 # ProgramaTestes
-Teste
+Programa para gestão e anaise da produção e testagem dos capacetes da marca SHARK produzidos pela empresa SFPC, realizado
+em contexto de estágio.
