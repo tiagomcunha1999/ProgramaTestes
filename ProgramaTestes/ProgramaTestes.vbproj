@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C316F55F-6790-45B3-8B23-F6534471739B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProgramaTestes.My.MyApplication</StartupObject>
+    <RootNamespace>ProgramaTestes</RootNamespace>
+    <AssemblyName>ProgramaTestes</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProgramaTestes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProgramaTestes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm2.Designer.vb">
+      <DependentUpon>MainForm2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Analysis\ReportAnalysisFinal.Designer.vb">
+      <DependentUpon>ReportAnalysisFinal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report Analysis\ReportAnalysisFinal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportView.Designer.vb">
+      <DependentUpon>ReportView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLControlador2.vb" />
+    <Compile Include="Tables\TableOperator.Designer.vb">
+      <DependentUpon>TableOperator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\TableOperator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\SizeTable.Designer.vb">
+      <DependentUpon>SizeTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\SizeTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ModelTable.Designer.vb">
+      <DependentUpon>ModelTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ModelTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\Tables.Designer.vb">
+      <DependentUpon>Tables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\Tables.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SQLControlador.vb" />
+    <Compile Include="InfoDiaria.Designer.vb">
+      <DependentUpon>InfoDiaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfoDiaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\YearTable.Designer.vb">
+      <DependentUpon>YearTable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\YearTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestesFinalDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestesFinalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\ReadTeste.Designer.vb">
+      <DependentUpon>ReadTeste.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\ReadTeste.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\AddTest.Designer.vb">
+      <DependentUpon>AddTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\AddTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\Tests.Designer.vb">
+      <DependentUpon>Tests.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\Tests.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testes\UpdateTest.Designer.vb">
+      <DependentUpon>UpdateTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testes\UpdateTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestesBdDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestesBdDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TestesBdDataSet.vb">
+      <DependentUpon>TestesBdDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm2.resx">
+      <DependentUpon>MainForm2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Analysis\ReportAnalysisFinal.resx">
+      <DependentUpon>ReportAnalysisFinal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Analysis\ReportTeste2.rdlc" />
+    <EmbeddedResource Include="Reports\Report.rdlc" />
+    <EmbeddedResource Include="Reports\ReportView.resx">
+      <DependentUpon>ReportView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\TableOperator.resx">
+      <DependentUpon>TableOperator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\SizeTable.resx">
+      <DependentUpon>SizeTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ModelTable.resx">
+      <DependentUpon>ModelTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Tables.resx">
+      <DependentUpon>Tables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoDiaria.resx">
+      <DependentUpon>InfoDiaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\YearTable.resx">
+      <DependentUpon>YearTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\AddTest.resx">
+      <DependentUpon>AddTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\ReadTeste.resx">
+      <DependentUpon>ReadTeste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\Tests.resx">
+      <DependentUpon>Tests.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testes\UpdateTest.resx">
+      <DependentUpon>UpdateTest.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Analises.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="TestesBdDataSet.xsc">
+      <DependentUpon>TestesBdDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TestesBdDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TestesBdDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestesBdDataSet.xss">
+      <DependentUpon>TestesBdDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TestesFinalDataSet.xsc">
+      <DependentUpon>TestesFinalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TestesFinalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TestesFinalDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TestesFinalDataSet.xss">
+      <DependentUpon>TestesFinalDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTesting, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+</Project>
